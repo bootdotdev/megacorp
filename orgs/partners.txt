@@ -1,2 +1,3 @@
 partner list
-jayson,gross,htmz,contributor
+Boot.dev
+TheStartup
