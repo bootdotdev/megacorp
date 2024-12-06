@@ -1,1 +1,6 @@
-partner list
+  partner list
+++<<<<<<< HEAD
+ +SalesInc
+++=======
++ 
+++>>>>>>> delete_records
