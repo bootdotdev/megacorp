@@ -1,0 +1,102 @@
+UNSTRUCTURED CUSTOMER DATA - TODO: INTERNS IT CLEAN UP
+
+John Doe, johndoe@example.com, Username: jdoe123
+Jane Smith, janesmith@example.com, Preference: Email
+michael.johnson@example.com, Company ID: A12345, Last Login: 2023-06-19
+Emily Davis, emily.davis@example.com, Role: Editor
+Christopher Brown, chris.brown@example.com, Preference: SMS, Subscription: Premium
+Amanda Wilson, amanda.wilson@example.com, CC: 4111-2222-3333-4444
+Joshua Martinez, joshua.martinez@example.com, Last Purchase: 2023-05-10
+Ashley Moore, ashley.moore@example.com, Company ID: B67890, Role: Admin
+Robert Taylor, 000-11-2222 robert.taylor@example.com, Member Since: 2021
+Olivia Harris, olivia.harris@example.com, Preference: Phone
+Benjamin Clark, benjamin.clark@example.com, Subscription: Basic
+emma.james@example.com, CC: 4111-5555-6666-7777, Last Login: 2023-06-18
+Daniel Lewis, daniel.lewis@example.com, Bio: "Loves hiking and outdoor adventures."
+James White, james.white@example.com, Preference: Email, Membership Status: Active
+Isabella Walker, isabella.walker@example.com, Favorite Feature: Dashboard
+Alexander Hall, alexander.hall@example.com, Company ID: C34567
+Grace Lee, grace.lee@example.com, Last Login: 2023-06-17, CC: 4111-8888-9999-0000
+Mason Young, mason.young@example.com, Preference: SMS, Subscription: Premium
+Hannah King, hannah.king@example.com, Last Purchase: 2023-04-22
+Elijah Scott, elijah.scott@example.com, Company ID: D89012
+Mia Green, mia.green@example.com, CC: 4111-1234-5678-9012
+Jack Wright, jack.wright@example.com, Bio: "Tech enthusiast and blogger."
+sophia.adams@example.com, Preference: Phone, Last Login: 2023-06-16
+Lucas Baker, lucas.baker@example.com, Member Since: 2020
+Avery Gonzalez, avery.gonzalez@example.com, Subscription: Basic
+Michael Nelson, michael.nelson@example.com, Company ID: E12345, Role: Contributor
+Samantha Carter, samantha.carter@example.com, Last Login: 2023-06-15
+William Mitchell, william.mitchell@example.com, Last Purchase: 2023-05-20
+abigail.rivera@example.com, Subscription: Premium, Member Since: 2019
+Jacob Perez, jacob.perez@example.com, Preference: Email, Bio: "Avid reader and writer."
+Evelyn Roberts, evelyn.roberts@example.com, Membership Status: Inactive
+logan.edwards@example.com, Role: Admin, Last Login: 2023-06-14
+Emily Stewart, emily.stewart@example.com, CC: 4111-5678-1234-5678
+Madison Turner, madison.turner@example.com, Bio: "Fitness coach and nutritionist."
+Henry Torres, henry.torres@example.com, Preference: SMS, Last Purchase: 2023-04-01
+lily.morgan@example.com, Phone: (555) 345-6789, Subscription: Basic
+Jackson Bell, jackson.bell@example.com, Company ID: F67890, Role: Moderator
+Sofia Reyes, sofia.reyes@example.com, Member Since: 2022
+Ryan Bailey, ryan.bailey@example.com, CC: 4111-8901-2345-6789
+Avery Cooper, avery.cooper@example.com, Preference: Phone, Last Login: 2023-06-13
+Scarlett Kelly, scarlett.kelly@example.com, Membership Status: Active
+Grace Howard, grace.howard@example.com, CC: 4111-3456-7890-1234
+Zoe Ward, zoe.ward@example.com, Preference: Phone
+david.ramirez@example.com, Member Since: 2021, Subscription: Premium
+Emma Richardson, emma.richardson@example.com, Company ID: G90123
+john.barnes@example.com, Last Login: 2023-06-12
+Harper Lee, harper.lee@example.com, Preference: Email
+lucas.murphy@example.com, Phone: (555) 890-1234
+Mia Henderson, mia.henderson@example.com, Subscription: Basic
+Ella Patterson, ella.patterson@example.com, Preference: SMS, Member Since: 2023
+Ella Thompson, SSN: 123-45-6789 ella.thompson@example.com, Membership Status: Inactive
+david.lewis@example.com, Company ID: H23456, Last Purchase: 2023-03-30
+Chloe Wilson, chloe.wilson@example.com, Phone: (555) 234-5678
+logan.anderson@example.com, Role: Contributor, Preference: Phone
+Charlotte Harris, charlotte.harris@example.com, Phone: (555) 345-6789
+aiden.walker@example.com, CC: 4111-1234-5678-1234
+Daniel King, daniel.king@example.com, Subscription: Premium
+Lily Young, lily.young@example.com, Preference: Email, Last Login: 2023-06-11
+lucas.allen@example.com, Phone: (555) 456-7890
+Victoria Wright, victoria.wright@example.com, Company ID: I34567
+jackson.scott@example.com, Member Since: 2021
+Emily Lopez, emily.lopez@example.com, Phone: (555) 567-8901
+Harper Hill, harper.hill@example.com, Preference: SMS
+mia.edwards@example.com, Phone: (555) 678-9012
+Noah Carter, noah.carter@example.com, CC: 4111-2345-6789-1234
+james.turner@example.com, Company ID: J45678
+Chloe Morris, chloe.morris@example.com, Phone: (555) 789-0123
+Lily Perez, lily.perez@example.com, Preference: Email, Member Since: 2022
+logan.bailey@example.com, Phone: (555) 890-1234, Role: Moderator
+Benjamin Ramirez, benjamin.ramirez@example.com, Phone: (555) 123-4567
+william.campbell@example.com, Company ID: K56789, Last Login: 2023-06-10
+Olivia Adams, olivia.adams@example.com, Preference: SMS
+emily.clark@example.com, Phone: (555) 234-5678
+Mia Flores, mia.flores@example.com, Subscription: Basic
+Lucas Stewart, lucas.stewart@example.com, Phone: (555) 345-6789
+Chloe Cox, chloe.cox@example.com, CC: 4111-3456-7890-2345
+Logan Murphy, logan.murphy@example.com, Phone: (555) 456-7890
+William Sanders, william.sanders@example.com, Company ID: L67890, Role: Editor
+sophia.diaz@example.com, Preference: Email, Member Since: 2023
+Mia Gray, mia.gray@example.com, Phone: (555) 567-8901, favorite language: sh (bourne shell)
+Harper Bryant, harper.bryant@example.com, Company ID: M78901
+aiden.hughes@example.com, Phone: (555) 678-9012
+Emily Simmons, emily.simmons@example.com, Last Login: 2023-06-09
+James Butler, james.butler@example.com, Phone: (555) 789-0123, CC: 4111-4567-8901-3456
+charlotte.fisher@example.com, Preference: Phone, Member Since: 2021
+Daniel Foster, daniel.foster@example.com, Company ID: N89012, Role: Contributor
+Lily Gonzales, lily.gonzales@example.com, Phone: (555) 890-1234
+aiden.ross@example.com, CC: 4111-5678-9012-4567
+Olivia Hayes, olivia.hayes@example.com, Company ID: O90123
+emily.jenkins@example.com, Phone: (555) 123-4567
+Daniel Foster, daniel.foster@example.com, Preference: Email 999-88-7777
+chloe.bell@example.com, Company ID: P12345 555-000-1234
+Lily Morgan, lily.morgan@example.com, Phone: (555) 234-5678, CC: 4111-6789-0123-5678
+noah.baker@example.com, Member Since: 2021
+Mia Nelson, mia.nelson@example.com, Phone: (555) 345-6789
+boots@boot.dev, Last Login: 2023-06-08
+Daniel Carter, daniel.carter@example.com, Phone: (555) 456-7890, sh user
+Phone: (555) 567-8901
+USER PREFERENCES: Email, SMS, Phone
+CREDIT CARD: 4111-1111-1111-1111, 4111-2222-3333-4444, 4111-5555-6666-7777, 4111-8888-9999-0000, 4111-1234-5678-9012, 4111-3456-7890-1234, 4111-5678-1234-5678, 4111-8901-2345-6789, 4111-1234-5678-1234, 4111-3456-7890-1234, 4111-4567-8901-3456, 4111-5678-9012-4567, 4111-6789-0123-5678
