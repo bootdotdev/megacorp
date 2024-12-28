@@ -1,1 +1,4 @@
 partner list
+SalesInc 2
+TheStartup
+The lineUP
