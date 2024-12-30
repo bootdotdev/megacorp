@@ -1,3 +1,7 @@
-# megacorp
+# Git Deep Dive Part 2
 
-The starter repo for the [Git 2 course](https://www.boot.dev/learn/learn-git-2) on Boot.dev.
+This repo is more focused on git commands, their flags and GitHub functions used in team development like:
+- fork
+- clone
+
+Git Deep Dive Part 1 focuses on solo development unless I find a way to merge them into one repo without losing the commits.
