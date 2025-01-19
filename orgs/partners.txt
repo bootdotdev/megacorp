@@ -1,2 +1,4 @@
-Boot.dev
+
+Partner list 
+
 TheStartup
