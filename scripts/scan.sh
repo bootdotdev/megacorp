@@ -1,1 +1,9 @@
-# TODO: write the script
+systemd-cat
+obs-ffmpeg-mux
+aureport
+oeuoeu
+oeuoeuoeu
+eouoeuo
+oeuoueoa
+aoeuaoeu
+oeuaouuoe
