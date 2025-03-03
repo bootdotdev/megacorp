@@ -1,1 +1,3 @@
-partner list
+aaa
+SalesInc
+TheStartup
