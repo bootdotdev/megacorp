@@ -1,0 +1,16 @@
+.
+├── contributors
+│   ├── theprimeagen.txt
+│   └── wagslane.txt
+├── customers
+│   ├── all.csv
+│   └── unstructured.txt
+├── orgs
+│   └── partners.txt
+├── README.md
+├── scripts
+│   ├── apux.sh
+│   └── scan.sh
+└── tree.txt
+
+5 directories, 9 files
