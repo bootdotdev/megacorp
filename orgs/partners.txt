@@ -1,1 +1,5 @@
 partner list
+
+SaleInc
+TheStartup
+https://github.com/KAMAL-V007/megacorp.git
