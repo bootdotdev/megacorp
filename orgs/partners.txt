@@ -1,3 +1,2 @@
 partner list
-anotherOne
 theStartup
