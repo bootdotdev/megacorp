@@ -1,4 +1,4 @@
 partner list
-Boot.dev
+
 TheStartup
 
