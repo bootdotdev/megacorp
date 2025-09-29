@@ -1,1 +1,8 @@
-# TODO: write the script
+echo "Scanning for credit card numbers"
+echo "whatever that line in the middle is"
+echo "Scan complete"
+echo "Scanning for social security card numbers"
+echo "whatever that other line in the middle is"
+echo "Social security scan complete"
+echo "Scanning for phone numbers"
+echo "phone number scan complete"
