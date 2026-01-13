@@ -1,9 +1,1 @@
-<<<<<<< HEAD
 https://github.com/w3bmonkey
-=======
-<<<<<<< HEAD
-https://github.com/w3bmonkey
-=======
-https://github.com/w3bmonkey/megacorp
->>>>>>> c855bbc (add myself as a contributor)
->>>>>>> 136a22a (add myself as a contributor)
