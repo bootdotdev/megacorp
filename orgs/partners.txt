@@ -1,3 +1,3 @@
-partner lis
-Boot.dev
-TheStartupt
+partner list
+SalesInc
+TheStartup
