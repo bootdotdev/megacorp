@@ -1,1 +1,3 @@
-partner list
+partner lis
+Boot.dev
+TheStartupt
