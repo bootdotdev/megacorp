@@ -1,0 +1,11 @@
+
+
+value: SignUp = SignUp(
+    email="aaron@gmail.com",
+    password="hello_world",
+    confirm_password="hello_world"
+)
+
+print(SignUp)
+print()
+print(value.model_dump())
