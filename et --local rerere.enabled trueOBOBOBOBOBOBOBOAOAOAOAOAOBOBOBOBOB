@@ -1,0 +1,243 @@
+[4mGIT-SWITCH[24m(1)                                Git Manual                                [4mGIT-SWITCH[24m(1)
+
+[1mNAME[0m
+       git-switch - Switch branches
+
+[1mSYNOPSIS[0m
+       [1mgit switch [22m[[4m<options>[24m] [[1m--no-guess[22m] [4m<branch>[0m
+       [1mgit switch [22m[[4m<options>[24m] [1m--detach [22m[[4m<start-point>[24m]
+       [1mgit switch [22m[[4m<options>[24m] ([1m-c[22m|[1m-C[22m) [4m<new-branch>[24m [[4m<start-point>[24m]
+       [1mgit switch [22m[[4m<options>[24m] [1m--orphan [4m[22m<new-branch>[0m
+
+[1mDESCRIPTION[0m
+       Switch to a specified branch. The working tree and the index are updated to match the branch.
+       All new commits will be added to the tip of this branch.
+
+       Optionally a new branch could be created with either [1m-c[22m, [1m-C[22m, automatically from a remote
+       branch of same name (see [1m--guess[22m), or detach the working tree from any branch with [1m--detach[22m,
+       along with switching.
+
+       Switching branches does not require a clean index and working tree (i.e. no differences
+       compared to [1mHEAD[22m). The operation is aborted however if the operation leads to loss of local
+       changes, unless told otherwise with [1m--discard-changes [22mor [1m--merge[22m.
+
+[1mOPTIONS[0m
+       [4m<branch>[0m
+           Branch to switch to.
+
+       [4m<new-branch>[0m
+           Name for the new branch.
+
+       [4m<start-point>[0m
+           The starting point for the new branch. Specifying a [4m<start-point>[24m allows you to create a
+           branch based on some other point in history than where [1mHEAD [22mcurrently points. (Or, in the
+           case of [1m--detach[22m, allows you to inspect and detach from some other point.)
+
+           You can use the [1m@[22m{-[4m<N>[24m} syntax to refer to the [4m<N>[24m-th last branch/commit switched to
+           using [1mgit switch [22mor [1mgit checkout [22moperation. You may also specify [1m- [22mwhich is synonymous to
+           [1m@[22m{-1}. This is often used to switch quickly between two branches, or to undo a branch
+           switch by mistake.
+
+           As a special case, you may use [4m<rev-a>[24m[1m...[4m[22m<rev-b>[24m as a shortcut for the merge base of
+           [4m<rev-a>[24m and [4m<rev-b>[24m if there is exactly one merge base. You can leave out at most one of
+           [4m<rev-a>[24m and [4m<rev-b>[24m, in which case it defaults to [1mHEAD[22m.
+
+       [1m-c [4m[22m<new-branch>[24m, [1m--create [4m[22m<new-branch>[0m
+           Create a new branch named [4m<new-branch>[24m starting at [4m<start-point>[24m before switching to the
+           branch. This is the transactional equivalent of
+
+               $ git branch <new-branch>
+               $ git switch <new-branch>
+
+           that is to say, the branch is not reset/created unless [1mgit switch [22mis successful (e.g.,
+           when the branch is in use in another worktree, not just the current branch stays the
+           same, but the branch is not reset to the start-point, either).
+
+       [1m-C [4m[22m<new-branch>[24m, [1m--force-create [4m[22m<new-branch>[0m
+           Similar to [1m--create [22mexcept that if [4m<new-branch>[24m already exists, it will be reset to
+           [4m<start-point>[24m. This is a convenient shortcut for:
+
+               $ git branch -f _<new-branch>_
+               $ git switch _<new-branch>_
+
+       [1m-d[22m, [1m--detach[0m
+           Switch to a commit for inspection and discardable experiments. See the "DETACHED HEAD"
+           section in [1mgit-checkout[22m(1) for details.
+
+       [1m--guess[22m, [1m--no-guess[0m
+           If [4m<branch>[24m is not found but there does exist a tracking branch in exactly one remote
+           (call it [4m<remote>[24m) with a matching name, treat as equivalent to
+
+               $ git switch -c <branch> --track <remote>/<branch>
+
+           If the branch exists in multiple remotes and one of them is named by the
+           [1mcheckout.defaultRemote [22mconfiguration variable, we’ll use that one for the purposes of
+           disambiguation, even if the [4m<branch>[24m isn’t unique across all remotes. Set it to e.g.
+           [1mcheckout.defaultRemote=origin [22mto always checkout remote branches from there if [4m<branch>[0m
+           is ambiguous but exists on the [4morigin[24m remote. See also [1mcheckout.defaultRemote [22min [1mgit-[0m
+           [1mconfig[22m(1).
+
+           [1m--guess [22mis the default behavior. Use [1m--no-guess [22mto disable it.
+
+           The default behavior can be set via the [1mcheckout.guess [22mconfiguration variable.
+
+       [1m-f[22m, [1m--force[0m
+           An alias for [1m--discard-changes[22m.
+
+       [1m--discard-changes[0m
+           Proceed even if the index or the working tree differs from [1mHEAD[22m. Both the index and
+           working tree are restored to match the switching target. If [1m--recurse-submodules [22mis
+           specified, submodule content is also restored to match the switching target. This is used
+           to throw away local changes.
+
+       [1m-m[22m, [1m--merge[0m
+           If you have local modifications to one or more files that are different between the
+           current branch and the branch to which you are switching, the command refuses to switch
+           branches in order to preserve your modifications in context. However, with this option, a
+           three-way merge between the current branch, your working tree contents, and the new
+           branch is done, and you will be on the new branch.
+
+           When a merge conflict happens, the index entries for conflicting paths are left unmerged,
+           and you need to resolve the conflicts and mark the resolved paths with [1mgit add [22m(or [1mgit rm[0m
+           if the merge should result in deletion of the path).
+
+       [1m--conflict=[4m[22m<style>[0m
+           The same as [1m--merge [22moption above, but changes the way the conflicting hunks are
+           presented, overriding the [1mmerge.conflictStyle [22mconfiguration variable. Possible values are
+           [1mmerge [22m(default), [1mdiff3[22m, and [1mzdiff3[22m.
+
+       [1m-q[22m, [1m--quiet[0m
+           Quiet, suppress feedback messages.
+
+       [1m--progress[22m, [1m--no-progress[0m
+           Progress status is reported on the standard error stream by default when it is attached
+           to a terminal, unless [1m--quiet [22mis specified. This flag enables progress reporting even if
+           not attached to a terminal, regardless of [1m--quiet[22m.
+
+       [1m-t[22m, [1m--track[22m[ ([1mdirect[22m|[1minherit[22m)]
+           When creating a new branch, set up "upstream" configuration.  [1m-c [22mis implied. See [1m--track[0m
+           in [1mgit-branch[22m(1) for details.
+
+           If no [1m-c [22moption is given, the name of the new branch will be derived from the
+           remote-tracking branch, by looking at the local part of the refspec configured for the
+           corresponding remote, and then stripping the initial part up to the "*". This would tell
+           us to use [1mhack [22mas the local branch when branching off of [1morigin/hack [22m(or
+           [1mremotes/origin/hack[22m, or even [1mrefs/remotes/origin/hack[22m). If the given name has no slash,
+           or the above guessing results in an empty name, the guessing is aborted. You can
+           explicitly give a name with [1m-c [22min such a case.
+
+       [1m--no-track[0m
+           Do not set up "upstream" configuration, even if the [1mbranch.autoSetupMerge [22mconfiguration
+           variable is true.
+
+       [1m--orphan [4m[22m<new-branch>[0m
+           Create a new unborn branch, named [4m<new-branch>[24m. All tracked files are removed.
+
+       [1m--ignore-other-worktrees[0m
+           [1mgit switch [22mrefuses when the wanted ref is already checked out by another worktree. This
+           option makes it check the ref out anyway. In other words, the ref can be held by more
+           than one worktree.
+
+       [1m--recurse-submodules[22m, [1m--no-recurse-submodules[0m
+           Using [1m--recurse-submodules [22mwill update the content of all active submodules according to
+           the commit recorded in the superproject. If nothing (or [1m--no-recurse-submodules[22m) is used,
+           submodules working trees will not be updated. Just like [1mgit-submodule[22m(1), this will
+           detach [1mHEAD [22mof the submodules.
+
+[1mEXAMPLES[0m
+       The following command switches to the "master" branch:
+
+           $ git switch master
+
+       After working in the wrong branch, switching to the correct branch would be done using:
+
+           $ git switch mytopic
+
+       However, your "wrong" branch and correct "mytopic" branch may differ in files that you have
+       modified locally, in which case the above switch would fail like this:
+
+           $ git switch mytopic
+           error: You have local changes to 'frotz'; not switching branches.
+
+       You can give the [1m-m [22mflag to the command, which would try a three-way merge:
+
+           $ git switch -m mytopic
+           Auto-merging frotz
+
+       After this three-way merge, the local modifications are [4mnot[24m registered in your index file, so
+       [1mgit diff [22mwould show you what changes you made since the tip of the new branch.
+
+       To switch back to the previous branch before we switched to mytopic (i.e. "master" branch):
+
+           $ git switch -
+
+       You can grow a new branch from any commit. For example, switch to "[1mHEAD~3[22m" and create branch
+       "[1mfixup[22m":
+
+           $ git switch -c fixup HEAD~3
+           Switched to a new branch 'fixup'
+
+       If you want to start a new branch from a remote branch of the same name:
+
+           $ git switch new-topic
+           Branch `new-topic` set up to track remote branch `new-topic` from `origin`
+           Switched to a new branch `new-topic`
+
+       To check out commit [1mHEAD~3 [22mfor temporary inspection or experiment without creating a new
+       branch:
+
+           $ git switch --detach HEAD~3
+           HEAD is now at 9fc9555312 Merge branch 'cc/shared-index-permbits'
+
+       If it turns out whatever you have done is worth keeping, you can always create a new name for
+       it (without switching away):
+
+           $ git switch -c good-surprises
+
+[1mCONFIGURATION[0m
+       Everything below this line in this section is selectively included from the [1mgit-config[22m(1)
+       documentation. The content is the same as what’s found there:
+
+       [1mcheckout.defaultRemote[0m
+           When you run [1mgit checkout [4m[22m<something>[24m or [1mgit switch [4m[22m<something>[24m and only have one remote,
+           it may implicitly fall back on checking out and tracking e.g.  [1morigin/[4m[22m<something>[24m. This
+           stops working as soon as you have more than one remote with a [4m<something>[24m reference. This
+           setting allows for setting the name of a preferred remote that should always win when it
+           comes to disambiguation. The typical use-case is to set this to [1morigin[22m.
+
+           Currently this is used by [1mgit-switch[22m(1) and [1mgit-checkout[22m(1) when [1mgit checkout [4m[22m<something>[0m
+           or [1mgit switch [4m[22m<something>[24m will checkout the [4m<something>[24m branch on another remote, and by
+           [1mgit-worktree[22m(1) when [1mgit worktree add [22mrefers to a remote branch. This setting might be
+           used for other checkout-like commands or functionality in the future.
+
+       [1mcheckout.guess[0m
+           Provides the default value for the [1m--guess [22mor [1m--no-guess [22moption in [1mgit checkout [22mand [1mgit[0m
+           [1mswitch[22m. See [1mgit-switch[22m(1) and [1mgit-checkout[22m(1).
+
+       [1mcheckout.workers[0m
+           The number of parallel workers to use when updating the working tree. The default is one,
+           i.e. sequential execution. If set to a value less than one, Git will use as many workers
+           as the number of logical cores available. This setting and
+           [1mcheckout.thresholdForParallelism [22maffect all commands that perform checkout. E.g.
+           checkout, clone, reset, sparse-checkout, etc.
+
+               [1mNote[0m
+               Parallel checkout usually delivers better performance for repositories located on
+               SSDs or over NFS. For repositories on spinning disks and/or machines with a small
+               number of cores, the default sequential checkout often performs better. The size and
+               compression level of a repository might also influence how well the parallel version
+               performs.
+
+       [1mcheckout.thresholdForParallelism[0m
+           When running parallel checkout with a small number of files, the cost of subprocess
+           spawning and inter-process communication might outweigh the parallelization gains. This
+           setting allows you to define the minimum number of files for which parallel checkout
+           should be attempted. The default is 100.
+
+[1mSEE ALSO[0m
+       [1mgit-checkout[22m(1), [1mgit-branch[22m(1)
+
+[1mGIT[0m
+       Part of the [1mgit[22m(1) suite
+
+Git 2.53.0                                   02/04/2026                                [4mGIT-SWITCH[24m(1)
