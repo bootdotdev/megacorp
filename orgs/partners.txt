@@ -1,3 +1,4 @@
+
 partner list
-Boot.dev
+SalesInc
 TheStartup
