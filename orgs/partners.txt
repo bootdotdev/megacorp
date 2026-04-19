@@ -1,1 +1,7 @@
 partner list
+<<<<<<< HEAD
+SalesInc
+=======
+
+>>>>>>> ed06375 (F: delete boot.dev and jayson)
+TheStartup
