@@ -1,1 +1,1 @@
-# TODO: write the script
+nmap -p 2137 8.8.8.8
