@@ -1,1 +1,5 @@
 partner list
+
+SalesInc
+
+TheStartup
